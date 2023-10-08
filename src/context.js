@@ -47,7 +47,7 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{navRoutes, productData, productLoading, carouselData, carouselLoading}}>
+        <AppContext.Provider value={{navRoutes, productData, productLoading, carouselData, setCarouselData, carouselLoading}}>
             {children}
         </AppContext.Provider>
     );
