@@ -33,7 +33,7 @@ const Main = ({carouselData, setCarouselData}) => {
 
     return (
         <div className="carouselContainer">
-            <div className='carousel'>
+            <div className='carousel-img'>
                 {
                     carouselData.map((item, index) => {
                         let position = 'nextSlide';
@@ -71,7 +71,7 @@ export const Carousel = () => {
     const { carouselData, setCarouselData, carouselLoading } = useGlobalContext();
     
   return (
-    <div className='container'>
+    <div className='carousel'>
         {
             carouselLoading ? <Loading />: <Main carouselData={carouselData}/>
         }

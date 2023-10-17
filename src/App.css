@@ -3,3 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 80vw;
+  max-width: 70em;
+  margin: auto;
+}

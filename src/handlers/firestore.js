@@ -15,7 +15,7 @@ const db = getFirestore(app);
 
 export const Firestore = {
     readDocs: (...args) => {
-        const [collection_name] = args
+        const [collection_name, sub_collection] = args
         let docs = []
         const docRef = collection(db, collection_name)
 

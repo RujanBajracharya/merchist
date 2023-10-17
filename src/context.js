@@ -1,8 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { Firestore } from './handlers/firestore.js';
+import { products } from "./data.js";
+
 
 export const AppContext = createContext();
-
 
 
 const navRoutes = [
@@ -28,14 +29,6 @@ export const AppProvider = ({ children }) => {
     const [carouselLoading, setCarouselLoading] = useState(true);
 
     useEffect(() => {
-        Firestore.readDocs('Products')
-            .then((data) => {
-                setProductData(data)
-                setProductLoading(false)
-            }).catch(error => {
-                console.error('Error fetching Firestore data:', error);
-                setProductLoading(false);
-            });
         Firestore.readDocs('carousel')
             .then((data) => {
                 setCarouselData(data)
@@ -47,7 +40,7 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{navRoutes, productData, productLoading, carouselData, setCarouselData, carouselLoading}}>
+        <AppContext.Provider value={{navRoutes, products, productLoading, carouselData, setCarouselData, carouselLoading}}>
             {children}
         </AppContext.Provider>
     );

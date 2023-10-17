@@ -1,4 +1,4 @@
-.container {
+.carousel {
     width: 70em;
     height: 36.25em;
     overflow: hidden;
@@ -13,7 +13,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        .carousel {
+        .carousel-img {
             display: flex;
             
             img {
