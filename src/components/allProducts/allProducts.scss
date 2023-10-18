@@ -1,21 +1,19 @@
 @import '../../styles/globals.scss';
 
-.productSlider {
+.allProducts {
     margin: auto;
     margin-top: 2.625em;
     font-family: $ff-primary;
     border-radius: 0;
     
-    .slider {
+    .catalog {
         width: 100%;
-        overflow: scroll;
         margin: 3.25em 0;
         .container {
             display: flex;
             width: 100%;
-            justify-content: space-between;
             gap: 1.925em;
-            
+            flex-wrap: wrap;
         }
     }
 }

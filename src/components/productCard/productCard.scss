@@ -1,0 +1,55 @@
+@import '../../styles/globals.scss';
+
+.item {
+    border: solid 1px $div-color;
+    border-radius: 20px;
+    width: 15.9375em;
+    flex: 1;
+    
+    .image {
+        width: 15.9375em;
+        
+        img {
+            height: 11.75em;
+            width: calc(100% - 2px);
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+    .info {
+        margin: 2.05em 1.125em 2.875em 1.125em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        font-family: $ff-secondary;
+
+        h3 {
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+
+            .rating-component {
+                color: black;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                color: #626264;
+            }
+        }
+    }
+        
+    
+}
