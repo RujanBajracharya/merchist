@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './productCard.scss';
 import Rating from '@mui/material/Rating';
 
@@ -9,7 +10,7 @@ export const ProductCard = ({product}) => {
         </div>
         <div className="info">
             <h3>
-                {product.name}
+                <Link className='link' to={`/singleProduct/${product._id}`} >{product.name}</Link>
             </h3>
             <h1>
                 ${product.variants[0].price}

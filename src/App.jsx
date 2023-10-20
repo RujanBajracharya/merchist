@@ -4,8 +4,10 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Footer } from './components/footer/Footer';
 import { Home } from './pages/home/Home';
 import { Login } from './pages/login/Login';
+import { SingleProduct } from './pages/singleProduct/SingleProduct';
 
 function App() {
+
   const Layout = () => {
     return(
       <div className="main">
@@ -26,6 +28,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: `/singleProduct/:id`,
+          element: <SingleProduct />,
         },
       ]
     },

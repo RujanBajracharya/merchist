@@ -1,0 +1,133 @@
+@import '../../styles/globals.scss';
+
+.productDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .image {
+        width: 33.75em;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .info {
+        .label {
+            display: flex;
+            flex-direction: column;
+            gap: 2.375em;
+            margin-bottom: 1.5em;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h1 {
+                    font-family: $ff-gentle;
+                    font-weight: 700;
+                    display: block;
+                    width: 12.5em;
+                }
+
+                button {
+                    outline: none;
+                    border: none;
+                    border-radius: 50%;
+                    width: 2.5em;
+                    height: 2.5em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                }
+            }
+
+            h1 {
+                    font-family: $ff-primary;
+                    font-weight: 700;
+            }
+
+            p {
+                font-family: $ff-gentle;
+                font-weight: 400;
+                color: $txt-dim;
+            }
+
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            font-family: $ff-gentle;
+            gap: 1em;
+
+            &-component {
+                color: $txt-dim;
+            }
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .itemCounter {
+            display: flex;
+            align-items: center;
+            margin: 3.625em 0 3.875em 0;
+
+            button {
+                color: $txt-primary;
+                width: 2.5em;
+                height: 2.5em;
+                outline: none;
+                border: none;
+                border-radius: 15px;
+            }
+
+            span {
+                font-size: 1.25rem;
+                margin: 0 1em;
+                font-family: $ff-gentle;
+            }
+        }
+
+        .actionButtons {
+            display: flex;
+            align-items: center;
+            gap: 1.25em;
+
+            button {
+                height: 2.375em;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                font-family: $ff-gentle;
+                font-weight: 700;
+                font-size: 0.875em;
+
+                &.order {
+                    width: 15.125em;
+                    background-color: $btn-primary;
+                    color: white;
+                }
+
+                &.add-cart {
+                    width: 8.8125em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.625em;
+
+                    img {
+                        width: 1.25em;
+                        height: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+}
